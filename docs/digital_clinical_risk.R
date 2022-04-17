@@ -50,4 +50,7 @@ wgll <- get_page_text(url4) %>%
   enframe() %>%
   unnest("value")
 
+## dtac digital technology assessment criteria
+
+dtac <- readtext::readtext("https://www.nhsx.nhs.uk/documents/60/DTAC_version_1.0_FINAL_updated_16.04.odt")
 
