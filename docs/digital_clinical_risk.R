@@ -42,4 +42,12 @@ data_saves_lives <- get_page_text(url3) %>%
   unnest("value")
 
 
+## what good looks like wgll
+
+url4 <- "https://www.nhsx.nhs.uk/digitise-connect-transform/what-good-looks-like/what-good-looks-like-publication/"
+
+wgll <- get_page_text(url4) %>%
+  enframe() %>%
+  unnest("value")
+
 
