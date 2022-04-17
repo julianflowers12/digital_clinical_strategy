@@ -26,3 +26,20 @@ dcb160 <- paste0("https://digital.nhs.uk", dcb160)
 
 
 dcb160_text <- map(dcb160, pdf_text)
+
+dcb129_text %>%
+  enframe() %>%
+  unnest("value") %>%
+  mutate(value = str_squish(value)) %>%
+  View()
+
+## data saves lives
+
+url3 <- "https://www.gov.uk/government/publications/data-saves-lives-reshaping-health-and-social-care-with-data-draft/data-saves-lives-reshaping-health-and-social-care-with-data-draft"
+
+data_saves_lives <- get_page_text(url3) %>%
+  enframe() %>%
+  unnest("value")
+
+
+
